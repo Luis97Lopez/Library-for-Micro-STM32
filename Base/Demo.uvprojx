@@ -384,9 +384,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>tp01.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\Activite2\Source\tp01.c</FilePath>
+              <FilePath>..\MesProjectSTM32\Activite2\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -402,6 +402,16 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyGPIO.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -791,9 +801,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>tp01.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\Activite2\Source\tp01.c</FilePath>
+              <FilePath>..\MesProjectSTM32\Activite2\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -809,6 +819,16 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyGPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyGPIO.c</FilePath>
             </File>
           </Files>
         </Group>
