@@ -336,9 +336,9 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</Filename>
+          <Filename>..\Fichiers_Projets\MesDrivers\Source\MyTimer.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Demo_simule\../MesProjectSTM32/MesDrivers/Source/MyTimer.c\21</Expression>
+          <Expression>\\Demo_simule\../Fichiers_Projets/MesDrivers/Source/MyTimer.c\21</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>
@@ -406,7 +406,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MesProjectSTM32\Activite2\Source\main.c</PathWithFileName>
+      <PathWithFileName>..\Fichiers_Projets\Activite2\Source\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -422,48 +422,24 @@
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\MesProjectSTM32\MesDrivers\Include\MyTimer.h</PathWithFileName>
-      <FilenameWithoutPath>MyTimer.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</PathWithFileName>
+      <PathWithFileName>..\Fichiers_Projets\MesDrivers\Source\MyTimer.c</PathWithFileName>
       <FilenameWithoutPath>MyTimer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>4</FileNumber>
+      <FileNumber>3</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\MesProjectSTM32\MesDrivers\Include\MyGPIO.h</PathWithFileName>
-      <FilenameWithoutPath>MyGPIO.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>5</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\MesProjectSTM32\MesDrivers\Source\MyGPIO.c</PathWithFileName>
-      <FilenameWithoutPath>MyGPIO.c</FilenameWithoutPath>
+      <PathWithFileName>..\Fichiers_Projets\MesDrivers\Include\MyTimer.h</PathWithFileName>
+      <FilenameWithoutPath>MyTimer.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

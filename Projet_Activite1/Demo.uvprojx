@@ -386,7 +386,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\Activite2\Source\main.c</FilePath>
+              <FilePath>..\Fichiers_Projets\Activite1\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -394,24 +394,14 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</FilePath>
-            </File>
-            <File>
               <FileName>MyGPIO.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyGPIO.h</FilePath>
+              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyGPIO.h</FilePath>
             </File>
             <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyGPIO.c</FilePath>
+              <FilePath>..\Fichiers_Projets\MesDrivers\Source\MyGPIO.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -803,7 +793,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\Activite2\Source\main.c</FilePath>
+              <FilePath>..\Fichiers_Projets\Activite1\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -811,24 +801,14 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyTimer.c</FilePath>
-            </File>
-            <File>
               <FileName>MyGPIO.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Include\MyGPIO.h</FilePath>
+              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyGPIO.h</FilePath>
             </File>
             <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesProjectSTM32\MesDrivers\Source\MyGPIO.c</FilePath>
+              <FilePath>..\Fichiers_Projets\MesDrivers\Source\MyGPIO.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,4 +1,5 @@
 #include "stm32f10x.h"
+#include "../../MesDrivers/Include/MyGPIO.h"
 
 // CHECK IF KTH BIT OF N NUMBER IS SET OR NOT
 int bit_is_set(int n, int k){
@@ -7,7 +8,7 @@ int bit_is_set(int n, int k){
 
 int main(void)
 {
-	
+	/*
 	// TURN ON REGISTERS GPIO A, B and C
  	RCC->APB2ENR |= (0x01 << 2) | (0x01 << 3) | (0x01 << 4) ;
 	
@@ -30,4 +31,16 @@ int main(void)
 				GPIOC->ODR &= ~(GPIO_ODR_ODR10);
 		}
 	}while(1) ;
+	*/
+	
+	//Setting PC10 as Output PushPull
+	MyGPIO_Struct_TypeDef g;
+	g.GPIO = GPIOC;
+	g.GPIO_Pin = 10;
+	g.GPIO_Conf = Out_Ppull;
+	
+	MyGPIO_Init (&g);
+	
+	
+	while(1);
 }
