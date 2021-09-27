@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Activite2' 
+ * Project: 'Demo' 
  * Target:  'Réele' 
  */
 

@@ -22,7 +22,11 @@ void MyTimer_Base_Init ( MyTimer_Struct_TypeDef * Timer ) ;
 #define MyTimer_Base_Stop(Timer) ( Timer->CR1 &= ~(TIM_CR1_CEN) )
 
 // Interruptions
+
 void TIM2_IRQHandler ( void );
-void MyTimer_ActiveIT (TIM_TypeDef * Timer , char Prio ) ;
+void MyTimer_ActiveIT  (TIM_TypeDef * Timer , char Prio , void (*IT_function ) (void) ) ;
+
+//PWM
+void MyTimer_PWM (TIM_TypeDef * Timer , char Channel ) ;
 
 #endif
