@@ -401,16 +401,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Headers</GroupName>
-          <Files>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyTimer.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
@@ -809,16 +799,6 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Fichiers_Projets\MesDrivers\Source\MyTimer.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Headers</GroupName>
-          <Files>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyTimer.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -394,11 +394,6 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>MyGPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyGPIO.h</FilePath>
-            </File>
-            <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Fichiers_Projets\MesDrivers\Source\MyGPIO.c</FilePath>
@@ -800,11 +795,6 @@
         <Group>
           <GroupName>MesDrivers</GroupName>
           <Files>
-            <File>
-              <FileName>MyGPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Fichiers_Projets\MesDrivers\Include\MyGPIO.h</FilePath>
-            </File>
             <File>
               <FileName>MyGPIO.c</FileName>
               <FileType>1</FileType>
