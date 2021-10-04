@@ -1,5 +1,6 @@
 #include "stm32f10x.h"
 #include "../../MesDrivers/Include/MyTimer.h"
+#include "../../MesDrivers/Include/MyGPIO.h"
 
 int cnt=0;
 void Ma_Fonction_IT (void){
@@ -19,13 +20,15 @@ int main(void)
 	//TIMERS
 	MyTimer_Struct_TypeDef t;
 	
+	
    // TURN ON REGISTERS GPIO C
  	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN ;
+	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN ;
 	
-	//GPIO
-	GPIOC->CRH &= ~(GPIO_CRH_CNF10);
-	GPIOC->CRH &= ~(GPIO_CRH_MODE10);
-	GPIOC->CRH |= GPIO_CRH_MODE10_0;
+	RCC->APB2ENR |= (0x01 << 2); //enable clock
+	GPIOA->CRL &= ~0XF; //reset
+	GPIOA->CRL |= 0X9; //altout pushpull
+	
 	
 	t.Timer = TIM2; //Initializing TIM2 with a period of 500ms
 	t.ARR = 6000-1;
@@ -34,7 +37,7 @@ int main(void)
 	
 	MyTimer_PWM(t.Timer,1); //Put BEFORE counter starts
 	
-	MyTimer_ActiveIT(t.Timer,1, Callback); //Enabling interruptions
+	MyTimer_ActiveIT(t.Timer,1, 0); //Enabling interruptions
 	MyTimer_Base_Start(t.Timer); //Starting counter
 
 

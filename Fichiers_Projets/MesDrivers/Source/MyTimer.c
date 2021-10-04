@@ -61,11 +61,14 @@ void TIM4_IRQHandler ( void ){
 
 
 
+
 void MyTimer_PWM (TIM_TypeDef * Timer , char Channel ) {
-	Timer -> CR1 |= TIM_CR1_ARPE;
-	Timer -> EGR |= TIM_EGR_UG;
+	
+	//Timer -> CR1 |= TIM_CR1_ARPE;
+	//Timer -> EGR |= TIM_EGR_UG;
+	
 	if (Channel==1){
-		Timer -> CCMR1 |= TIM_CCMR1_OC1PE; //Enable
+		//Timer -> CCMR1 |= TIM_CCMR1_OC1PE; //Enable
 		Timer -> CCER |= TIM_CCER_CC1E;
 		Timer -> CCMR1 &=~ (TIM_CCMR1_OC1M); // Reset bits
 		Timer -> CCMR1 |= TIM_CCMR1_OC1M_1; // bit 1
@@ -93,4 +96,8 @@ void MyTimer_PWM (TIM_TypeDef * Timer , char Channel ) {
 		Timer -> CCMR2 |= TIM_CCMR2_OC4M_2; // bit 2
 }	
 
+}
+
+void PWM_setup(TIM_TypeDef * TimerTimer, char channel, int rapportCyclique){
+	
 }
