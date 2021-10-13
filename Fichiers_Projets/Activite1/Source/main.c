@@ -1,46 +1,36 @@
 #include "stm32f10x.h"
 #include "../../MesDrivers/Include/MyGPIO.h"
 
-// CHECK IF KTH BIT OF N NUMBER IS SET OR NOT
-int bit_is_set(int n, int k){
-	return n & (1 << k);
-}
-
 int main(void)
 {
-	/*
-	// TURN ON REGISTERS GPIO A, B and C
- 	RCC->APB2ENR |= (0x01 << 2) | (0x01 << 3) | (0x01 << 4) ;
+	// GPIO LED and BUTTON
+	MyGPIO_Struct_TypeDef led,btn;
 	
-	// INPUT PULL UP
-	GPIOC->CRH &= ~(0xF);
-	GPIOC->CRH |= 0x8;
-	GPIOC->ODR |= GPIO_ODR_ODR8;
+	// TURN ON REGISTERS GPIO C
+ 	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
 	
-	// OUTPUT 
-	GPIOC->CRH &= ~(GPIO_CRH_CNF10);
-	GPIOC->CRH &= ~(GPIO_CRH_MODE10);
-	GPIOC->CRH |= GPIO_CRH_MODE10_0;
+	// CONFIGURE LED
+	led.GPIO = GPIOC;
+	led.GPIO_Pin = 10;
+	led.GPIO_Conf = Out_Ppull;
+	MyGPIO_Init(&led);
 	
-	do{
-		if(!bit_is_set(GPIOC->IDR, 8)){
+	// CONFIGURE BUTTON
+	btn.GPIO = GPIOC;
+	btn.GPIO_Pin = 8;
+	btn.GPIO_Conf = In_PullUp;
+	MyGPIO_Init(&btn);
+		
+	
+		do{
+		if(!MyGPIO_Read(btn.GPIO, btn.GPIO_Pin)){
 			// IF IS TRUE WE TURN ON THE OUTPUT BIT
-				GPIOC->ODR |= GPIO_ODR_ODR10;
+				MyGPIO_Set(led.GPIO, led.GPIO_Pin);
 		}else{
 				// IF IS NOT WE TURN OFF THE OUTPUT BIT
-				GPIOC->ODR &= ~(GPIO_ODR_ODR10);
+				MyGPIO_Reset(led.GPIO, led.GPIO_Pin);
 		}
 	}while(1) ;
-	*/
 	
-	//Setting PC10 as Output PushPull
-	MyGPIO_Struct_TypeDef g;
-	g.GPIO = GPIOC;
-	g.GPIO_Pin = 10;
-	g.GPIO_Conf = Out_Ppull;
-	
-	MyGPIO_Init (&g);
-	
-	
-	while(1);
+
 }
