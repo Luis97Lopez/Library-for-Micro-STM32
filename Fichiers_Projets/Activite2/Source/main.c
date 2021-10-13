@@ -2,45 +2,46 @@
 #include "../../MesDrivers/Include/MyTimer.h"
 #include "../../MesDrivers/Include/MyGPIO.h"
 
-int cnt=0;
-void Ma_Fonction_IT (void){
-	cnt++;
+// CALLBACK FUNCTION FOR TIMER
+MyGPIO_Struct_TypeDef led;
+void Callback () {
+	MyGPIO_Toggle(led.GPIO, led.GPIO_Pin);
 }
-
-void Callback (void) {
-	// OUTPUT 
-	GPIOC->ODR = GPIOC->ODR ^ GPIO_ODR_ODR10;
-}
-
 
 int main(void)
 {
-	
-	
-	//TIMERS
+	// TIMERS
 	MyTimer_Struct_TypeDef t;
+	MyGPIO_Struct_TypeDef out;
 	
+  // TURN ON REGISTERS GPIO A and C
+ 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN | RCC_APB2ENR_IOPCEN ;
 	
-   // TURN ON REGISTERS GPIO C
- 	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN ;
-	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN ;
+	// GPIO OUT PWM
+	led.GPIO = GPIOC;
+	led.GPIO_Conf = Out_Ppull;
+	led.GPIO_Pin = 10;
+	MyGPIO_Init(&led);
 	
-	RCC->APB2ENR |= (0x01 << 2); //enable clock
-	GPIOA->CRL &= ~0XF; //reset
-	GPIOA->CRL |= 0X9; //altout pushpull
+	// GPIO OUT PWM
+	out.GPIO = GPIOA;
+	out.GPIO_Conf = AltOut_Ppull;
+	out.GPIO_Pin = 0;
+	MyGPIO_Init(&out);
 	
-	
+	// CONFIGURE TIM2;
 	t.Timer = TIM2; //Initializing TIM2 with a period of 500ms
 	t.ARR = 6000-1;
 	t.PSC = 6000-1;
 	MyTimer_Base_Init(&t);
 	
-	MyTimer_PWM(t.Timer,1); //Put BEFORE counter starts
+	// CONFIGURE PWM
+	MyTimer_PWM_Init(t.Timer,1); //Put BEFORE counter starts
+	MyTimer_PWM_ConfigureRatio(t.Timer, 1, 10); // Ratio 50%
 	
-	MyTimer_ActiveIT(t.Timer,1, 0); //Enabling interruptions
+	// ACTIVATE TIMER AND INTERRUPTIONS
+	MyTimer_ActiveIT(t.Timer, 1, Callback); //Enabling interruptions
 	MyTimer_Base_Start(t.Timer); //Starting counter
-
-
 
 	while(1);
 }

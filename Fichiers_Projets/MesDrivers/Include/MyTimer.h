@@ -17,16 +17,15 @@ typedef struct
 *************************************************************************************************
 */
 
+// TIMER
 void MyTimer_Base_Init ( MyTimer_Struct_TypeDef * Timer ) ;
 #define MyTimer_Base_Start(Timer) (	Timer->CR1 |= TIM_CR1_CEN )
 #define MyTimer_Base_Stop(Timer) ( Timer->CR1 &= ~(TIM_CR1_CEN) )
 
-// Interruptions
-
-void TIM2_IRQHandler ( void );
+// INTERRUPTIONS
 void MyTimer_ActiveIT  (TIM_TypeDef * Timer , char Prio , void (*IT_function ) (void) ) ;
 
 //PWM
-void MyTimer_PWM (TIM_TypeDef * Timer , char Channel ) ;
-
+void MyTimer_PWM_Init (TIM_TypeDef * Timer , char Channel ) ;
+void MyTimer_PWM_ConfigureRatio (TIM_TypeDef * Timer , char Channel, int Ratio ) ;
 #endif
